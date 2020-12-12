@@ -32,7 +32,8 @@ namespace TRMDesktopUI
 
             _container
                 .Singleton<IWindowManager, WindowManager>()
-                .Singleton<IEventAggregator, EventAggregator>();
+                .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<IAPIHelper, APIHelper>();
 
             //Connect ViewModels to View using reflection
             GetType().Assembly.GetTypes()
